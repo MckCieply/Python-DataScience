@@ -8,4 +8,13 @@ plt.bar(names, bmis, color="green")
 plt.title("My friends' BMIs")
 plt.show()
 for person in enumerate(names):
-    print(f"## {person[1]:<13}has BMI of {round(bmis[person[0]], 2)} which is ")
+    thisPerson = person[0]
+    if (bmis[thisPerson] <= 18.4):
+        state = "underweight"
+    elif (bmis[thisPerson] >= 18.4 and bmis[thisPerson] <= 24.9):
+        state = "normal"
+    elif (bmis[thisPerson] >= 25 and bmis[thisPerson] <= 39.9):
+        state = "overweight"
+    elif (bmis[thisPerson] >= 40):
+        state = "obese"
+    print(f"## {person[1]:<13}has BMI of {round(bmis[person[0]], 2)} which is {state}.")
