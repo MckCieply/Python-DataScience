@@ -1,5 +1,5 @@
 import numpy as np
-
+import matplotlib.pyplot as plt
 data = np.loadtxt("Data/BTC-USD.csv")
 yearly = data[0:365]
 mean = round(np.mean(yearly),2)
@@ -16,3 +16,7 @@ Minimum: {minimum},
 Maximum: {maximum},
 Standard Deviation: {deviation},
 Interquartile Range: {iqr}""")
+
+plt.plot(yearly, color="red", linestyle="dotted")
+plt.title("BTC to USD")
+plt.show()
