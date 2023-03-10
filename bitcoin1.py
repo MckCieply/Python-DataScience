@@ -10,3 +10,9 @@ deviation = round(np.std(yearly),2)
 q1 = round(np.median(yearly[:len(yearly)//2]),2)
 q3 = round(np.median(yearly[len(yearly)//2:]),2)
 iqr = round(q3 - q1,2)
+print(f"""Arithmetic mean: {mean},
+Median: {median},
+Minimum: {minimum},
+Maximum: {maximum},
+Standard Deviation: {deviation},
+Interquartile Range: {iqr}""")
